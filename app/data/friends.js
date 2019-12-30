@@ -3,7 +3,8 @@
 
 var friendsData = [
     {
-        name: "poo",
+        name: "A goat",
+        photo: "https://thumbs.newschoolers.com/index.php?src=http%3A%2F%2Ffc09.deviantart.net%2Ffs70%2Fi%2F2010%2F010%2F1%2Fd%2FGoat_roar_by_fbcota.jpg&size=400x1000",
         scores: [
             1,
             5,
@@ -18,7 +19,7 @@ var friendsData = [
         ]
     },
     {
-        name: "butt",
+        name: "",
         scores: [
             5,
             2,

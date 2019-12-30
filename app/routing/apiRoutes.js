@@ -12,23 +12,23 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", (req, res) => {
+        console.log(req.body)
         var newFriend = req.body;
         var lowDifference = 50;
         var bff = "";
         //compare scores from new friend to scores in friends array. 
         //iterate through objects in friendsData
-        for (i = 0; i < friendsData.length; i++) {
-            var data = i;
+        for (var i = 0; i < friendsData.length; i++) {
             var currentDiffTotal = 0;
             //iterate through score arrays, get difference of scores and add them together
-            for (i = 0; i < 10; i++) {
-                var currentScoreDiff = Math.abs(newUser[scores].i - friendsData.data.scores.i);
+            for (var j = 0; j < newFriend.length; j++) {
+                var currentScoreDiff = Math.abs(newFriend.scores.j - friendsData.i.scores.j);
                 currentDiffTotal += currentScoreDiff;
             };
             //checks to see if score difference is lower than the current lowest difference
             if (currentDiffTotal < lowDifference) {
-                lowDifference = diffTotal;
-                bff = friendsData[data].name;
+                lowDifference = currentDiffTotal;
+                bff = friendsData[i].name;
             };
 
 
