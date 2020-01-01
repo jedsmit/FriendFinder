@@ -7,17 +7,10 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("./app/public"))
 
-
-var apiRoutes = require("./app/routing/apiRoutes.js")(app);
-
-var htmlRoutes = require("./app/routing/htmlRoutes.js")(app);
-
-
-
-
-
-
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 //listen

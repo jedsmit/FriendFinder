@@ -1,10 +1,8 @@
-
 //array containing survey data of users
-
 var friendsData = [
     {
         name: "A goat",
-        photo: "https://thumbs.newschoolers.com/index.php?src=http%3A%2F%2Ffc09.deviantart.net%2Ffs70%2Fi%2F2010%2F010%2F1%2Fd%2FGoat_roar_by_fbcota.jpg&size=400x1000",
+        photo: "https://images.pexels.com/photos/1773181/pexels-photo-1773181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         scores: [
             1,
             5,
@@ -19,7 +17,24 @@ var friendsData = [
         ]
     },
     {
+        name: "Barry Gibb",
+        photo: "https://i.pinimg.com/originals/29/30/23/2930230334d2941b8f91bb003fda457f.jpg",
+        scores: [
+            5,
+            2,
+            4,
+            1,
+            5,
+            2,
+            3,
+            3,
+            3,
+            1
+        ]
+    },
+    {
         name: "",
+        photo: "",
         scores: [
             5,
             2,
@@ -34,22 +49,8 @@ var friendsData = [
         ]
     },
     {
-        name: "nerd",
-        scores: [
-            5,
-            2,
-            4,
-            1,
-            5,
-            2,
-            3,
-            3,
-            3,
-            1
-        ]
-    },
-    {
-        name: "Joe Mamma",
+        name: "Mr. Conway Twitty",
+        photo: "https://pbs.twimg.com/media/D8SE7tIXUAAIMM9.jpg",
         scores: [
             4,
             3,
@@ -66,7 +67,7 @@ var friendsData = [
 
 ];
 
-//using jquery, get the user's scores from the chosen radio buttons on the survey 
+module.exports = friendsData;
 
 //push the scores into an array
 
@@ -76,4 +77,3 @@ var friendsData = [
 
 //display user with smallest score difference using a modal.
 
-module.exports = friendsData;

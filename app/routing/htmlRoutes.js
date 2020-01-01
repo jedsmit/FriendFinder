@@ -1,6 +1,6 @@
 var path = require("path");
-var express = require("express")
-var app = express;
+
+
 
 module.exports = function (app) {
     //default catch-all to homepage

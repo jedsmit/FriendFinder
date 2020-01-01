@@ -1,44 +1,41 @@
-var express = require("express")
-var path = require("path");
-var app = express;
 var friendsData = require("../data/friends.js");
 
 
 
 module.exports = function (app) {
 
-    app.get("/api/friends", (req, res) => {
-        res.send(friendsData);
+    app.get("/api/friends", function (req, res) {
+        res.json(friendsData);
     });
 
-    app.post("/api/friends", (req, res) => {
-        console.log(req.body)
-        var newFriend = req.body;
-        var lowDifference = 50;
-        var bff = "";
-        //compare scores from new friend to scores in friends array. 
-        //iterate through objects in friendsData
-        for (var i = 0; i < friendsData.length; i++) {
-            var currentDiffTotal = 0;
-            //iterate through score arrays, get difference of scores and add them together
-            for (var j = 0; j < newFriend.length; j++) {
-                var currentScoreDiff = Math.abs(newFriend.scores.j - friendsData.i.scores.j);
-                currentDiffTotal += currentScoreDiff;
-            };
-            //checks to see if score difference is lower than the current lowest difference
-            if (currentDiffTotal < lowDifference) {
-                lowDifference = currentDiffTotal;
-                bff = friendsData[i].name;
-            };
-
-
-            if (currentDiffTotal < lowDifference) {
-                lowDifference = totalDifference;
-            };
+    app.post("/api/friends", function (req, res) {
+        console.log("posting")
+        var newFriendScores = req.body.scores;
+        var bff = {
+            name: "",
+            photo: "",
+            score: 50
         };
-        console.log(lowDifference);
+        console.log(newFriendScores)
 
+        //iterate through objects in friendsData
 
-
+        for (i = 0; i < friendsData.length; i++) {
+            var friendName = friendsData[i].name;
+            var totalScoreDiff = 0;
+            //iterate through and compare scores in each friends data object to the user's scores and total the difference
+            for (j = 0; j < 10; j++) {
+                var indexScoreDiff = Math.abs(newFriendScores[j] - friendsData[i].scores[j]);
+                totalScoreDiff += indexScoreDiff;
+            }
+            //if difference is lower than the lowest so far, replace it with the lower one and update the bff variable
+            if (totalScoreDiff < bff.score) {
+                bff.score = totalScoreDiff;
+                bff.name = friendName;
+                bff.photo = friendsData[i].photo
+                console.log(bff);
+            }
+        }
+        res.json(bff);
     });
 };
