@@ -4,16 +4,16 @@ var friendsData = [
         name: "A goat",
         photo: "https://images.pexels.com/photos/1773181/pexels-photo-1773181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         scores: [
-            1,
             5,
             5,
             5,
             5,
-            4,
-            3,
             5,
-            2,
-            2
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     },
     {
@@ -33,19 +33,19 @@ var friendsData = [
         ]
     },
     {
-        name: "",
-        photo: "",
+        name: "Large Marge",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdZRrJkgqo_ra4o604Sl6v8h2yItZ0zWLNycja3yaN3RKIGgsK&s",
         scores: [
-            5,
             2,
-            4,
-            1,
-            5,
             2,
-            3,
-            3,
-            3,
-            1
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
         ]
     },
     {
