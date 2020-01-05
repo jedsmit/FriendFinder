@@ -33,7 +33,7 @@ module.exports = function (app) {
                 bff.score = totalScoreDiff;
                 bff.name = friendName;
                 bff.photo = friendsData[i].photo
-                console.log(bff);
+                //console.log(bff);
             }
         }
         res.json(bff);
