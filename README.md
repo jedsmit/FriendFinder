@@ -30,5 +30,5 @@ Then, a modal is dsipalyed with the name and photo of the "previous user" whose 
 
 ![modal](images/modal.png)
 
-After that, two are bffs forever!
+After that, the two are bffs forever!
 
